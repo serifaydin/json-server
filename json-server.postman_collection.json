@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "64363297-841c-46f4-be9f-41c1441eeaab",
+		"name": "json-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orderDetails?orderId=1&itemCode=item code 1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orderDetails"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1"
+						},
+						{
+							"key": "itemCode",
+							"value": "item code 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET & SORT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orderDetails?orderId=1&_sort=itemCode&_order=desc",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orderDetails"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1"
+						},
+						{
+							"key": "_sort",
+							"value": "itemCode"
+						},
+						{
+							"key": "_order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3,\r\n    \"orderNumber\":\"00000003\",\r\n    \"customerName\":\"Çınar Aydın\",\r\n    \"carrierAccount\":\"MNG\",\r\n    \"orderDate\": \"13.20.2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orders/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderNumber\":\"00000001\",\r\n    \"customerName\":\"Şerif Aydın\",\r\n    \"carrierAccount\":\"YK\",\r\n    \"orderDate\": \"11.20.2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/orders/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
